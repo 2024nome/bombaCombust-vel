@@ -10,8 +10,15 @@ class bombaCombustível:
         self.__quantidadeCombustivel = QuantidadeCombustiverl
         
 
-    def abastecerPorValor(self, gasolina = "6.99", diesel = "6.44", etanol = "4.13"):
-        self.tipoCombustiver 
+    def abastecerPorValor(self, valor):
+        litros = valor / self.__valorLitro
+        if litro > self.__quantidadeCombustivel:
+            print("quantidade insuficiente na bomba!")
+            return
+        
+        self.__quantidadeCombustivel -= litros
+        print(f"foram abastecidos{litros}")
+
 
     def abastecerPorLitro(self):
         pass
@@ -22,5 +29,7 @@ class bombaCombustível:
     def alterarCombustivel(self):
         pass
 
-    def QuantidadeCombustivel(self):
+    def QuantidadeCombustivel(self, valor= 200):
         pass
+
+
